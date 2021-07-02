@@ -1,0 +1,43 @@
+doctype html 
+html
+    head
+        style
+            include ../public/project.css 
+        
+        title=title 
+    body 
+       h2.reg NEW EMPLOYEES REGISTRATION
+       .container-register
+            form.regForm(action='/register' method='POST')
+
+                input.names(type='text' placeholder='Full Name' name="fullnames")
+                br
+                br
+
+                select.gender(name='Gender')
+                    option(value='gender') Gender
+                    option(value='female') Female
+                    option(value='male') Male
+                br
+                br 
+
+                input.dob(type='date' placeholder='Date of birth' name="dob")
+                br
+                br
+
+                input.residence(type='text' placeholder='Place of residence' name="res")
+                br  
+                br
+
+                input.nin(type='text' placeholder='NIN number' name="nin")
+                br 
+                br 
+
+                input.zawashId(type='text' placeholder='ZaWash ID' name="zaId")
+                br 
+                br 
+            
+                button.button2 REGISTER
+        
+
+                                

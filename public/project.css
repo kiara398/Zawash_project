@@ -1,0 +1,98 @@
+body{
+  background-color:aliceblue;
+}
+
+article {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 50px;
+  margin: 20px;
+  top: 20px;
+}
+
+.text-muted {
+  font-size: 24px;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  height: 150px;
+}
+
+
+/* editing the login page */
+.container {
+  width: 40%;
+  height: 40%;
+}
+.sign-in {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  color: grey;
+  font-weight: bold;
+}
+.container-login {
+  color: white;
+  /* background-color: honeydew; */
+  justify-content: center;
+}
+form {
+  border: 0.5px solid white;
+  border-radius: 2%;
+  padding: 15px;
+  background:linear-gradient(5deg, #0B132B, grey);
+  /* background-color: #0B132B; */
+}
+.btn-primary{
+  margin-left: 30%;
+  width: 40%;
+}
+.copyright{
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+/* editing registration page */
+.regForm{
+  border: 0.5px solid white;
+  border-radius: 2%;
+  padding: 15px;
+  background:linear-gradient(5deg, #0B132B, grey);
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.names, .gender, .dob, .residence, .nin, .zawashId{
+  width: 90%;
+  border: none;
+  border-radius: 4px;
+  padding: 6px;
+  color: grey;
+}
+.button2{
+  width: 80%;
+  padding: 8px;
+  background-color: rgb(67, 127, 238);
+  border: none;
+  border-radius: 6px;
+ color: white;
+}
+.button2:hover{
+  background-color: grey;
+}
+.reg{
+  color:  rgb(67, 127, 238);
+  text-align: center;
+  margin-top: 20px;
+}
