@@ -1,6 +1,7 @@
 // Dependecies
 const express = require("express")
-
+const path = require('path');
+const { title } = require("process");
 // instantiations
 const app = express()
 
@@ -10,12 +11,13 @@ app.set('views', './views');
 
 // middle ware
 app.use(express.urlencoded({extended: true}))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
 app.get('/', (req,res) =>{
-    res.send('Welcome to HOME PAGE!')
+    res.render('home', {title:"home_page"})
 })
-//routing to pug file. 
+
 app.get('/register',(req,res)=>{
     res.render('register_washer',{title:"Register Car Washer"})
 })
@@ -23,6 +25,14 @@ app.get('/register',(req,res)=>{
 app.post('/register',(req,res)=>{
     console.log(req.body)
     res.send("Data has been submitted")
+})
+app.get('/login',(req,res)=>{
+    res.render('login',{title:"login_page"})
+})
+
+app.post('/login',(req,res)=>{
+    console.log(req.body)
+    res.send("Successfully logged in!!")
 })
 
 // handling non existing routes

@@ -1,0 +1,27 @@
+extends layout 
+
+block content
+    body 
+        section
+            .container1
+                .row
+                    .col-sm-6.content
+                        .body-content
+                            img.logo(src='./images/zawash8.png' alt='logo')
+                            h1 Zaabu Washing Bay
+                            p Zaabu Washing Bay(ZaWash) is found along Mawanda road, kampala.We offer the best car maintainance services around town. We employ youth in the areas of Kalerwe and katanga among others.
+                            
+                            button.btn.btn-primary.btn-lg(type='button') View Our Services
+                            
+                            
+                    .col-sm-6
+                        #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src='images/wash.jpg' alt='...')
+                                .carousel-item
+                                        img.d-block.w-100(src='images/wash3.jpg' alt='...')
+                                .carousel-item
+                                        img.d-block.w-100(src='images/wash4.jpg' alt='...')
+                            
+

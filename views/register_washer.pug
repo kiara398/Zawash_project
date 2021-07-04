@@ -1,11 +1,8 @@
-doctype html 
-html
-    head
-        style
-            include ../public/project.css 
-        
-        title=title 
+extends layout 
+
+block content
     body 
+       
        h2.reg NEW EMPLOYEES REGISTRATION
        .container-register
             form.regForm(action='/register' method='POST')
