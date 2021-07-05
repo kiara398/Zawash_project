@@ -36,7 +36,7 @@ p{
 h1 {
   text-align: center;
   font-family: sans-serif;
-  color: grey;
+  color: #404042;
   font-weight: bold;
 }
 .container-login {
@@ -92,7 +92,7 @@ form {
   background-color: grey;
 }
 .reg{
-  color:  rgb(67, 127, 238);
+  color: #404042;
   text-align: center;
   margin-top: 20px;
 }
