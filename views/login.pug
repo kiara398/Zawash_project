@@ -5,7 +5,7 @@ block content
         .container-login 
             .container
                 img.logo(src='./images/zawash8.png' alt='logo')
-                form(action='/login' method='POST')
+                form(action='/login' method='POST' onsubmit="validation();")
                     h4.sign-in SIGN IN!
                     .form-floating
                         small#error1
@@ -19,6 +19,7 @@ block content
                         input#exampleCheck1.form-check-input(type='checkbox')
                         label.form-check-label(for='exampleCheck1') Keep me logged in
                     br
-                    button.btn.btn-primary(type='submit' onclick='checkName(), checkPassword()') Login
+                    button.btn.btn-primary(type='submit') Login
                     br
                     a(href='#') Forgot password?
+        

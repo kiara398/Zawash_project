@@ -1,5 +1,7 @@
 body{
-  background-color:aliceblue;
+  background-color: aliceblue;
+  /* background-color:gainsboro; */
+  /* background-color: rgb(25, 37, 48); */
 }
 
 p{
@@ -8,7 +10,8 @@ p{
   text-align: center;
   padding: 50px;
   margin: 20px;
-  top: 20px;
+  top: 50px;
+
 }
 
 .text-muted {
@@ -25,8 +28,8 @@ p{
 
 /* editing the login page */
 .container {
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
 }
 .sign-in {
   color: white;
@@ -36,20 +39,18 @@ p{
 h1 {
   text-align: center;
   font-family: sans-serif;
-  color: #404042;
+  color:#404042;
   font-weight: bold;
 }
 .container-login {
   color: white;
-  /* background-color: honeydew; */
   justify-content: center;
 }
 form {
-  border: 0.5px solid white;
   border-radius: 2%;
   padding: 15px;
   background:linear-gradient(5deg, #0B132B, grey);
-  /* background-color: #0B132B; */
+  
 }
 .btn-primary{
   margin-left: 30%;
@@ -60,11 +61,12 @@ form {
   font-style: italic;
   font-size: 15px;
   font-family: sans-serif;
+  color: white;
 }
 
 /* editing registration page */
-.regForm{
-  border: 0.5px solid white;
+.container-register{
+  border: none;
   border-radius: 2%;
   padding: 15px;
   background:linear-gradient(5deg, #0B132B, grey);
@@ -79,6 +81,7 @@ form {
   border-radius: 4px;
   padding: 6px;
   color: grey;
+  
 }
 .button2{
   width: 80%;
@@ -92,7 +95,67 @@ form {
   background-color: grey;
 }
 .reg{
-  color: #404042;
+  color: white;
   text-align: center;
   margin-top: 20px;
 }
+/* editing car tracker */
+#form-wrapper{
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.button3 {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+  display: block;
+  border: none;
+  background-color: rgb(67, 127, 238);
+  font-size: 24px;
+  border-radius: 8px;
+}
+.numberPlate, .arrival-time, .date{
+    width: 85%;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+   color: #0B132B;
+   justify-content: center;
+}
+.numberPlate{
+  width: 93%;
+  padding: 8px;
+  border: none;
+  border-radius: 12px;
+ color: #0B132B;
+ justify-content: center;
+}
+
+
+select{
+    width: 85%;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    color:#0B132B;
+}
+.container2{
+   width: 50%;
+   float: left;
+   
+}
+.container3{
+    width: 50%;
+    float: right;
+ }
+ .regist{
+  background-image: url(/images/bg4.jpg);
+  background: linear-gradient(to bottom, #000000b8, #000000b8), url('/images/bg4.jpg');
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-attachment: fixed;
+ }

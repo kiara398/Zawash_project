@@ -1,7 +1,12 @@
 // Dependecies
 const express = require("express")
 const path = require('path');
-const { title } = require("process");
+//requiring the routes.
+const homeroutes = require('./routes/homeroutes')
+const registerroutes = require('./routes/registerroutes')
+const loginroutes = require('./routes/loginroutes')
+const cartrackroutes = require('./routes/cartrackroutes')
+
 // instantiations
 const app = express()
 
@@ -14,26 +19,13 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
-app.get('/', (req,res) =>{
-    res.render('home', {title:"home_page"})
-})
+app.use('/', homeroutes)
 
-app.get('/register',(req,res)=>{
-    res.render('register_washer',{title:"Register Car Washer"})
-})
+app.use('/register', registerroutes)
 
-app.post('/register',(req,res)=>{
-    console.log(req.body)
-    res.send("Data has been submitted")
-})
-app.get('/login',(req,res)=>{
-    res.render('login',{title:"login_page"})
-})
+app.use('/login', loginroutes)
 
-app.post('/login',(req,res)=>{
-    console.log(req.body)
-    res.send("Successfully logged in!!")
-})
+app.use('/cartracking', cartrackroutes)
 
 // handling non existing routes
 app.get('*', (req, res)=> {

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+
+    body.regist 
+        .container
+            h2.reg REGISTER CAR HERE!
+            #form-wrapper
+                form#car-reg(action='/cartracking' method='POST')
+                    input#numberPlate.numberPlate(type='text' name='numberPlate' placeholder='Number-Plate')
+                    br
+                    small#error3
+                    br
+                    .container2
+                        input#date.date(type='date' name='today' placeholder='date')
+                        br
+                        small#errorDate
+                        br
+                        select#carType(name='carType')
+                            option(value='CarType') Car-Type
+                            option(value='small') Small Car
+                            option(value='medium') Medium Car
+                            option(value='truck') Truck
+                            option(value='bodaboda') Boda boda
+                        br
+                        small#errorType
+                        br
+                    .container3
+                        input#time.arrival-time(type='time' name='time' placeholder='Time of Arrival')
+                        small#errorTime
+                        br
+                        br
+                        select#carType(name='washPackage')
+                            option(value='package') Wash package
+                            option(value='small') Small
+                            option(value='medium') Medium
+                            option(value='full') Full Wash
+                            option(value='engine') Engine
+                            option(value='boda') Boda boda
+                            option(value='truck') Truck
+                        br
+                    
+                    p.null-field
+                    button.button3(type="submit") Register
+                    
