@@ -6,7 +6,7 @@ const homeroutes = require('./routes/homeroutes')
 const registerroutes = require('./routes/registerroutes')
 const loginroutes = require('./routes/loginroutes')
 const cartrackroutes = require('./routes/cartrackroutes')
-
+const dashboardroutes = require('./routes/dashboardroutes')
 // instantiations
 const app = express()
 
@@ -26,6 +26,8 @@ app.use('/register', registerroutes)
 app.use('/login', loginroutes)
 
 app.use('/cartracking', cartrackroutes)
+
+app.use('/dashboard', dashboardroutes)
 
 // handling non existing routes
 app.get('*', (req, res)=> {

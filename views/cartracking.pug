@@ -6,7 +6,7 @@ block content
         .container
             h2.reg REGISTER CAR HERE!
             #form-wrapper
-                form#car-reg(action='/cartracking' method='POST')
+                form#car-reg(action='')
                     input#numberPlate.numberPlate(type='text' name='numberPlate' placeholder='Number-Plate')
                     br
                     small#error3
@@ -25,21 +25,30 @@ block content
                         br
                         small#errorType
                         br
+                        select#washer(name='washer')
+                            option(value='washer') Washer
+                            option(value='cyrus') Cyrus
+                            option(value='alvin') Alvin
+                            option(value='musa') Musa
+                            option(value='shafik') Shafik
                     .container3
                         input#time.arrival-time(type='time' name='time' placeholder='Time of Arrival')
                         small#errorTime
                         br
                         br
-                        select#carType(name='washPackage')
-                            option(value='package') Wash package
-                            option(value='small') Small
-                            option(value='medium') Medium
-                            option(value='full') Full Wash
-                            option(value='engine') Engine
-                            option(value='boda') Boda boda
-                            option(value='truck') Truck
+                        input#color.color(type='text' name='color' placeholder='Car-color')
                         br
-                    
+                        br
+                        select#package(name='package')
+                            option(value='CarType') Wash package
+                            option(value='small') Small(10,000)
+                            option(value='CarType') Medium(15,000)
+                            option(value='CarType') Full Wash(20,000)
+                            option(value='CarType') Engine(10,000)
+                            option(value='CarType') Boda boda(5,000)
+                            option(value='CarType') Truck(20,000)
+                    br
                     p.null-field
-                    button.button3(type="submit") Register
+                    br
+                    button.button3(type='submit') Register
                     

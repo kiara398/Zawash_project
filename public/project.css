@@ -1,7 +1,12 @@
 body{
-  background-color: aliceblue;
-  /* background-color:gainsboro; */
-  /* background-color: rgb(25, 37, 48); */
+  background-image: url(/images/papper3.jfif);
+  background: linear-gradient(to bottom, white, #000000b8), url('/images/papper3.jfif');
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-attachment: fixed;
+  
+ 
 }
 
 p{
@@ -117,12 +122,12 @@ form {
   font-size: 24px;
   border-radius: 8px;
 }
-.numberPlate, .arrival-time, .date{
+ .arrival-time, .date, .color{
     width: 85%;
     padding: 8px;
     border: none;
     border-radius: 12px;
-   color: #0B132B;
+   color: grey;
    justify-content: center;
 }
 .numberPlate{
@@ -130,7 +135,7 @@ form {
   padding: 8px;
   border: none;
   border-radius: 12px;
- color: #0B132B;
+ color: grey;
  justify-content: center;
 }
 
@@ -140,7 +145,7 @@ select{
     padding: 8px;
     border: none;
     border-radius: 12px;
-    color:#0B132B;
+    color:grey;
 }
 .container2{
    width: 50%;
@@ -158,4 +163,19 @@ select{
   background-repeat: no-repeat;
   background-size: cover;
  background-attachment: fixed;
+ }
+ /* editing dashboard */
+ .table{
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  background:linear-gradient(5deg, #0B132B, grey);
+ color: white;
+ }
+ h2{
+  color:#0B132B ;
+  text-align: center;
+  margin-top: 20px;
  }

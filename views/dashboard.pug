@@ -1,0 +1,46 @@
+extends layout 
+
+block content 
+
+    body 
+        .container
+                h2 Earnings tracker
+                table.table
+                    thead.thead-dark
+                        tr
+                            th(scope='col') Washer
+                            th(scope='col') Cars washed
+                            th(scope='col') Amount due
+                        tbody
+                        tr
+                            th(scope='row') Musa
+                            td 5
+                            td 15000
+                        tr
+                            th(scope='row') Alvin
+                            td 3
+                            td 9000
+                        tr
+                            th(scope='row') Marvin
+                            td 6
+                            td 18000
+                h2 Costs tracker
+                table.table
+                    thead.thead-dark
+                        tr
+                            th(scope='col') Items purchased/used
+                            th(scope='col') Quantity
+                            th(scope='col') Amount spent
+                        tbody
+                        tr
+                            th(scope='row') Detergent
+                            td 5 sacks
+                            td 15000
+                        tr
+                            th(scope='row') Electricity
+                            td 13 units
+                            td 9000
+                        tr
+                            th(scope='row') Water
+                            td 6 jerricans
+                            td 18000
