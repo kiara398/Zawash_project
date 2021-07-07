@@ -1,12 +1,5 @@
 body{
-  background-image: url(/images/papper3.jfif);
-  background: linear-gradient(to bottom, white, #000000b8), url('/images/papper3.jfif');
-  color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
- background-attachment: fixed;
-  
- 
+ background-color: #f1f1f1;
 }
 
 p{
@@ -154,16 +147,22 @@ select{
  }
  /* editing dashboard */
  .table{
-  justify-content: center;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   border: none;
   text-align: center;
-  background:linear-gradient(5deg, #0B132B, grey);
+  background:linear-gradient(5deg, #0B132B, white);
  color: white;
  }
- h2{
-  color:#0B132B ;
+ h1, h2{
   text-align: center;
   margin-top: 20px;
+  font-family: roboto;
+ }
+ .dash{background-image: url(/images/papper3.jfif);
+ background: linear-gradient(to bottom, white, #000000b8), url('/images/papper3.jfif');
+ color: black;
+ background-repeat: no-repeat;
+ background-size: cover;
+background-attachment: fixed;
  }

@@ -6,7 +6,7 @@ block content
         .container
             h2.reg REGISTER CAR HERE!
             #form-wrapper
-                form#car-reg(action='')
+                form#car-reg(action='/cartracking' method='POST')
                     input#numberPlate.numberPlate(type='text' name='numberPlate' placeholder='Number-Plate')
                     br
                     small#error3

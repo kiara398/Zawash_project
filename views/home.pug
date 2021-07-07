@@ -2,30 +2,35 @@ extends layout
 
 block content
     body.home-page
+        .container1
+            .row
+                .col-sm-6.content
 
-        h1 ZAWASH
-        p  Zaabu Washing Bay(ZaWash) is found along Mawanda road, kampala.We offer the best car maintainance services around town. We employ youths in the areas of Kalerwe and katanga among others.
-        
-        h2 PACKAGES
-        .container
-            table#packages.table
-                thead.thead-dark
-                    tr
-                        th(scope='col') Small Cars
-                        th(scope='col') Medium Cars
-                        th(scope='col') Trucks
-                tbody
-                    tr
-                        td 10,000
-                        td 15,000
-                        td 20,000
-                thead.thead-dark
-                    tr
-                        th(scope='col') Full Wash
-                        th(scope='col') Engine
-                        th(scope='col') Boda boda
-                tbody
-                    tr
-                        td 20,000
-                        td 10,000
-                        td 5,000
+                    h1 ZAWASH
+                    p  Zaabu Washing Bay(ZaWash) is found along Mawanda road, kampala.We offer the best car maintainance services around town. We employ youths in the areas of Kalerwe and katanga among others.
+                    
+                    h2 PACKAGES
+                    .container
+                        table#packages.table
+                            thead.thead-dark
+                                tr
+                                    th(scope='col') SmallCars
+                                    th(scope='col') MediumCars
+                                    th(scope='col') Trucks
+                            tbody
+                                tr
+                                    td 10,000
+                                    td 15,000
+                                    td 20,000
+                            thead.thead-dark
+                                tr
+                                    th(scope='col') FullWash
+                                    th(scope='col') Engine
+                                    th(scope='col') Bodaboda
+                            tbody
+                                tr
+                                    td 20,000
+                                    td 10,000
+                                    td 5,000
+                .col-sm-6.content
+                    img(src="images/wash4.jpg", alt="image")
