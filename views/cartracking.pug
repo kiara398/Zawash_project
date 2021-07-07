@@ -31,13 +31,17 @@ block content
                             option(value='alvin') Alvin
                             option(value='musa') Musa
                             option(value='shafik') Shafik
+                        br
+                        small#errorWasher
+                        br
                     .container3
                         input#time.arrival-time(type='time' name='time' placeholder='Time of Arrival')
-                        small#errorTime
                         br
+                        small#errorTime
                         br
                         input#color.color(type='text' name='color' placeholder='Car-color')
                         br
+                        small#errorColor
                         br
                         select#package(name='package')
                             option(value='CarType') Wash package
@@ -47,8 +51,9 @@ block content
                             option(value='CarType') Engine(10,000)
                             option(value='CarType') Boda boda(5,000)
                             option(value='CarType') Truck(20,000)
-                    br
-                    p.null-field
-                    br
-                    button.button3(type='submit') Register
+                        br
+                        small#errorPackage
+                        br
                     
+                    button.button2(type='submit') REGISTER
+                            

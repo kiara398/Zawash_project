@@ -13,10 +13,8 @@ p{
   font-family: sans-serif;
   font-size: 20px;
   text-align: center;
-  padding: 50px;
-  margin: 20px;
-  top: 50px;
-
+  padding: 15px;
+  margin: 5px;
 }
 
 .text-muted {
@@ -112,16 +110,6 @@ form {
   border: none;
 }
 
-.button3 {
-  margin: auto;
-  width: 50%;
-  padding: 5px;
-  display: block;
-  border: none;
-  background-color: rgb(67, 127, 238);
-  font-size: 24px;
-  border-radius: 8px;
-}
  .arrival-time, .date, .color{
     width: 85%;
     padding: 8px;
