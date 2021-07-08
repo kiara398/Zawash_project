@@ -12,14 +12,14 @@ html
                      ul.navbar-nav.mr-auto
                         a.navbar-brand(href='#') ZaWash
                         li.nav-item
-                            a.nav-link(href='./') Home
+                            a.nav-link(href='./', class=routeName=='home'?'active': '') Home
                         li.nav-item
-                            a.nav-link(href='./cartracking') Car-tracking
+                            a.nav-link(href='./cartracking',  class=routeName=='cartracking'?'active': '') Car-tracking
                         li.nav-item
-                            a.nav-link(href='./dashboard') Dashboard
+                            a.nav-link(href='./dashboard',  class=routeName=='dashboard'?'active': '') Dashboard
                         li.nav-item
-                            a.nav-link(href='./register') Register
-                     a(href='./login')  Login
+                            a.nav-link(href='./register',  class=routeName=='register'?'active': '') Register
+                     a(href='./login',  class=routeName=='login'?'active': '')  Login
                     
 
     block content

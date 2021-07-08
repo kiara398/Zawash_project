@@ -7,6 +7,9 @@ const registerroutes = require('./routes/registerroutes')
 const loginroutes = require('./routes/loginroutes')
 const cartrackroutes = require('./routes/cartrackroutes')
 const dashboardroutes = require('./routes/dashboardroutes')
+
+require('dotenv').config();
+
 // instantiations
 const app = express()
 

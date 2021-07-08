@@ -151,8 +151,8 @@ select{
   border-radius: 8px;
   border: none;
   text-align: center;
-  background:linear-gradient(5deg, #0B132B, white);
- color: white;
+  font-size: 18px;
+
  }
  h1, h2{
   text-align: center;
@@ -165,4 +165,7 @@ select{
  background-repeat: no-repeat;
  background-size: cover;
 background-attachment: fixed;
+ }
+ .container-table{
+   width: 100%;
  }

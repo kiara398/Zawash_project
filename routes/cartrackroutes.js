@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/',(req,res)=>{
-    res.render('cartracking',{title:"car-tracking"})
+    res.render('cartracking',{title:"car-tracking", routeName:"cartracking"})
 })
 
 router.post('/',(req,res)=>{
