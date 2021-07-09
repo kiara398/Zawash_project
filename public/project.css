@@ -152,7 +152,6 @@ select{
   border: none;
   text-align: center;
   font-size: 18px;
-
  }
  h1, h2{
   text-align: center;
@@ -169,3 +168,6 @@ background-attachment: fixed;
  .container-table{
    width: 100%;
  }
+a{
+  color: rgb(179, 178, 178);
+}

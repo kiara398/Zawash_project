@@ -5,12 +5,13 @@ block content
        
        h2.reg NEW EMPLOYEES REGISTRATION
        .container-register
-            form.regForm(action='/register' method='POST')
-
+            form.regForm(name='register' action='/register' method='POST' onsubmit="validation2();")
+                small#errornames
                 input.names(type='text' placeholder='Full Name' name="fullnames")
                 br
                 br
 
+                small#errorgender
                 select.gender(name='Gender')
                     option(value='gender') Gender
                     option(value='female') Female
@@ -18,18 +19,21 @@ block content
                 br
                 br 
 
+                small#errordob
                 input.dob(type='date' placeholder='Date of birth' name="dob")
                 br
                 br
 
+                small#errores   
                 input.residence(type='text' placeholder='Place of residence' name="res")
                 br  
                 br
 
+                small#errornin
                 input.nin(type='text' placeholder='NIN number' name="nin")
                 br 
                 br 
-
+                small#errorza
                 input.zawashId(type='text' placeholder='ZaWash ID' name="zaId")
                 br 
                 br 

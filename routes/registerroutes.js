@@ -8,7 +8,7 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     console.log(req.body)
-    res.send("Data has been submitted")
+    // res.send("Data has been submitted")
 })
 
 //exporting the file

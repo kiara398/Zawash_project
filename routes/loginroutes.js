@@ -8,6 +8,6 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     console.log(req.body)
-    // res.send("Successfully logged in!!")
+    // res.render('dashboard')
 })
 module.exports = router;

@@ -39,3 +39,72 @@ let passwordval = /^[0-9a-zA-Z]+$/;
     }
 }
 // //validation of registration page
+let validation2 = () =>{
+  let fullname = document.register.fullnames;
+  let gender = document.register.Gender;
+  let dob = document.register.dob;
+  let residence = document.register.res;
+  let nin = document.register.nin;
+  let zaId = document.register.zaId;
+  let errornames = document.getElementById('errornames');
+  let errorgender = document.getElementById('errorgender');
+  let errordob = document.getElementById('errordob');
+  let errores = document.getElementById('errores');
+  let errornin = document.getElementById('errornin');
+  let errorza = document.getElementById('errorza');
+//if statements
+if(fullname.value == ''){
+  fullname.style.borderBottom = '2px solid coral';
+  errornames.innerHTML = 'fill in valid names'
+  errornames.style = 'font-size:15px; color:maroon;'
+} else{
+  fullname.style.border = '2px solid green';
+  errornames.innerHTML = '';
+}
+
+if(gender.value == "gender"){
+  gender.style.borderBottom = '2px solid coral';
+  errorgender.innerHTML = 'select your gender'
+  errorgender.style = 'font-size:15px; color:maroon;'
+} else{
+  gender.style.border = '2px solid green';
+  errorgender.innerHTML = '';
+}
+
+if(dob.value == ''){
+  dob.style.borderBottom = '2px solid coral';
+  errordob.innerHTML = 'fill in valid date of birth'
+  errordob.style = 'font-size:15px; color:maroon;'
+} else{
+  dob.style.border = '2px solid green';
+  errordob.innerHTML = '';
+}
+
+if(residence.value == ''){
+  residence.style.borderBottom = '2px solid coral';
+  errores.innerHTML = 'fill in residence'
+  errores.style = 'font-size:15px; color:maroon;'
+} else{
+  residence.style.border = '2px solid green';
+  errores.innerHTML = '';
+}
+
+if(nin.value == ''){
+  nin.style.borderBottom = '2px solid coral';
+  errornin.innerHTML = 'fill in valid NIN'
+  errornin.style = 'font-size:15px; color:maroon;'
+} else{
+  nin.style.border = '2px solid green';
+  errornin.innerHTML = '';
+}
+
+if(zaId.value == ''){
+  zaId.style.borderBottom = '2px solid coral';
+  errorza.innerHTML = 'fill in valid zawash ID'
+  errorza.style = 'font-size:15px; color:maroon; '
+} else{
+  zaId.style.border = '2px solid green';
+  errorza.innerHTML = '';
+}
+
+}
