@@ -71,7 +71,7 @@ form {
   margin: auto;
 }
 
-.names, .gender, .dob, .residence, .nin, .zawashId{
+.names, .gender, .dob, .residence, .nin, .phone{
   width: 90%;
   border: none;
   border-radius: 4px;

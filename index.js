@@ -7,11 +7,25 @@ const registerroutes = require('./routes/registerroutes')
 const loginroutes = require('./routes/loginroutes')
 const cartrackroutes = require('./routes/cartrackroutes')
 const dashboardroutes = require('./routes/dashboardroutes')
-
+const mongoose = require('mongoose')
 require('dotenv').config();
 
 // instantiations
 const app = express()
+
+//connect mongoose
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
+  
+  mongoose.connection
+    .on('open', () => {
+      console.log('Mongoose connection open');
+    })
+    .on('error', (err) => {
+      console.log(`Connection error: ${err.message}`);
+    });
 
 // settings or configurations
 app.set('view engine', 'pug');

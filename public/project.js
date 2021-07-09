@@ -45,13 +45,13 @@ let validation2 = () =>{
   let dob = document.register.dob;
   let residence = document.register.res;
   let nin = document.register.nin;
-  let zaId = document.register.zaId;
+  let phone = document.register.phonenumber;
   let errornames = document.getElementById('errornames');
   let errorgender = document.getElementById('errorgender');
   let errordob = document.getElementById('errordob');
   let errores = document.getElementById('errores');
   let errornin = document.getElementById('errornin');
-  let errorza = document.getElementById('errorza');
+  let errorphone = document.getElementById('errorphone');
 //if statements
 if(fullname.value == ''){
   fullname.style.borderBottom = '2px solid coral';
@@ -98,13 +98,13 @@ if(nin.value == ''){
   errornin.innerHTML = '';
 }
 
-if(zaId.value == ''){
-  zaId.style.borderBottom = '2px solid coral';
-  errorza.innerHTML = 'fill in valid zawash ID'
-  errorza.style = 'font-size:15px; color:maroon; '
+if(phone.value == ''){
+  phone.style.borderBottom = '2px solid coral';
+  errorphone.innerHTML = 'fill in phone number'
+  errorphone.style = 'font-size:15px; color:maroon; '
 } else{
-  zaId.style.border = '2px solid green';
-  errorza.innerHTML = '';
+  phone.style.border = '2px solid green';
+  errorphone.innerHTML = '';
 }
 
 }
