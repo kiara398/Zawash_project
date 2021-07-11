@@ -88,7 +88,20 @@ form {
   border-radius: 6px;
  color: white;
 }
+.button3{
+  width: 80%;
+  padding: 8px;
+  background-color: #8AC6D0;
+  border: none;
+  border-radius: 6px;
+ color: black;
+ text-transform: uppercase;
+ margin-top: 20px;
+}
 .button2:hover{
+  background-color: grey;
+}
+.button3:hover{
   background-color: grey;
 }
 .reg{
@@ -181,7 +194,7 @@ background-attachment: fixed;
  .container-table{
    width: 100%;
    text-align: center;
-  height: 60px;
+  height: 40px;
  }
 a{
   color: rgb(179, 178, 178);
