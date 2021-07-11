@@ -57,7 +57,8 @@ form {
   font-style: italic;
   font-size: 15px;
   font-family: sans-serif;
-  color: white;
+  color: #f1f1f1;
+  margin: auto;
 }
 
 /* editing registration page */
@@ -152,7 +153,19 @@ select{
   border: none;
   text-align: center;
   font-size: 18px;
+  background-color:#8AC6D0;
  }
+ .table2, td{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  height: 80px;
+  margin: auto;
+  border-top: 2px solid grey;
+ }
+
  h1, h2{
   text-align: center;
   margin-top: 20px;
@@ -167,6 +180,8 @@ background-attachment: fixed;
  }
  .container-table{
    width: 100%;
+   text-align: center;
+  height: 60px;
  }
 a{
   color: rgb(179, 178, 178);
