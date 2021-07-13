@@ -8,10 +8,10 @@ const cartrackSchema = new mongoose.Schema({
         trim: true,
     },
 
-    today:{
+    datetimeArrival: {
         type: Date,
         trim: true,
-    },
+        },
 
     carType:{
         type: String,
@@ -22,12 +22,7 @@ const cartrackSchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
-
-    time:{
-        type: String,
-        trim: true,
-    },
-
+    
     color:{
         type: String,
         trim: true,

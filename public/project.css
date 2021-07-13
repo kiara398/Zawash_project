@@ -199,3 +199,11 @@ background-attachment: fixed;
 a{
   color: rgb(179, 178, 178);
 }
+.alert{
+  width: 30%;
+  margin: auto;
+  font-family: cursive;
+  text-align: center;
+  font-size: 18px;
+}
+

@@ -25,6 +25,9 @@ router.get('/', async(req, res) => {
 // })
 
 router.post('/', async(req,res)=>{
+    let data = req.body
+    let datetimeArrival = Date.parse(data.today + 'T' + data.time)
+     data.datetimeArrival = datetimeArrival
     try{
        const cartrack = new Cartrack(req.body)
        await cartrack.save()
