@@ -3,6 +3,10 @@ extends layout
 block content
 
     body.regist 
+        if alert=='success'
+            div.alert.alert-success Car registered successfully!
+        if alert=='error'
+            div.alert.alert-danger OOPS! something went wrong!
         .container
             h2.reg REGISTER CAR HERE!
             #form-wrapper
@@ -26,11 +30,8 @@ block content
                         small#errorType
                         br
                         select#washer(name='washer')
-                            option(value='washer') Washer
-                            option(value='cyrus') Cyrus
-                            option(value='alvin') Alvin
-                            option(value='musa') Musa
-                            option(value='shafik') Shafik
+                            each washer in washers
+                                 option(value=washer._id) #{washer.fullnames}   
                         br
                         small#errorWasher
                         br

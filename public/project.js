@@ -40,6 +40,8 @@ let passwordval = /^[0-9a-zA-Z]+$/;
 }
 // //validation of registration page
 let validation2 = () =>{
+ 
+
   let fullname = document.register.fullnames;
   let gender = document.register.Gender;
   let dob = document.register.dob;
@@ -57,6 +59,7 @@ if(fullname.value == ''){
   fullname.style.borderBottom = '2px solid coral';
   errornames.innerHTML = 'fill in valid names'
   errornames.style = 'font-size:15px; color:maroon;'
+  return false;
 } else{
   fullname.style.border = '2px solid green';
   errornames.innerHTML = '';
@@ -66,6 +69,7 @@ if(gender.value == "gender"){
   gender.style.borderBottom = '2px solid coral';
   errorgender.innerHTML = 'select your gender'
   errorgender.style = 'font-size:15px; color:maroon;'
+  return false;
 } else{
   gender.style.border = '2px solid green';
   errorgender.innerHTML = '';
@@ -75,6 +79,7 @@ if(dob.value == ''){
   dob.style.borderBottom = '2px solid coral';
   errordob.innerHTML = 'fill in valid date of birth'
   errordob.style = 'font-size:15px; color:maroon;'
+  return false;
 } else{
   dob.style.border = '2px solid green';
   errordob.innerHTML = '';
@@ -84,6 +89,7 @@ if(residence.value == ''){
   residence.style.borderBottom = '2px solid coral';
   errores.innerHTML = 'fill in residence'
   errores.style = 'font-size:15px; color:maroon;'
+  return false;
 } else{
   residence.style.border = '2px solid green';
   errores.innerHTML = '';
@@ -93,6 +99,7 @@ if(nin.value == ''){
   nin.style.borderBottom = '2px solid coral';
   errornin.innerHTML = 'fill in valid NIN'
   errornin.style = 'font-size:15px; color:maroon;'
+  return false;
 } else{
   nin.style.border = '2px solid green';
   errornin.innerHTML = '';
@@ -102,9 +109,11 @@ if(phone.value == ''){
   phone.style.borderBottom = '2px solid coral';
   errorphone.innerHTML = 'fill in phone number'
   errorphone.style = 'font-size:15px; color:maroon; '
+  return false;
 } else{
   phone.style.border = '2px solid green';
   errorphone.innerHTML = '';
+ 
 }
-
+return true
 }
