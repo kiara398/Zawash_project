@@ -19,8 +19,8 @@ const cartrackSchema = new mongoose.Schema({
     },
 
     washer:{
-        type: String,
-        trim: true,
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Washer',
     },
     
     color:{

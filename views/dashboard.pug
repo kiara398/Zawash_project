@@ -12,21 +12,15 @@ block content
                             th(scope='col') Cars washed
                             th(scope='col') Amount due
                         tbody
-                        tr
-                            td
-                                input(type='text' placeholder='Name')
-                            td
-                                input(type='number' placeholder='Cars washed')
-                            td
-                                input(type='currency' placeholder='Amount Due')
+                        if washers.length 
+                            each washer in washers
+                                tr
+                                    td #{washer.details[0].fullnames}
+                                    td #{washer.count}  
+                                    
+                                
 
-                        tr
-                            td
-                                input(type='text' placeholder='Name')
-                            td
-                                input(type='number' placeholder='Cars washed')
-                            td
-                                input(type='currency' placeholder='Amount Due')
+                
                         
 
                 h2 Costs tracker
