@@ -159,24 +159,28 @@ select{
   background-size: cover;
  background-attachment: fixed;
  }
+
  /* editing dashboard */
  .table{
   padding: 30px;
   border-radius: 8px;
+  table-layout: fixed;
   border: none;
   text-align: center;
   font-size: 18px;
   background-color:#8AC6D0;
  }
  .table2, td{
-  padding: 10px;
+   width: 40%;
   border-radius: 10px;
+  table-layout: fixed;
   border: none;
   text-align: center;
   font-size: 18px;
   height: 80px;
   margin: auto;
   border-top: 2px solid grey;
+  background-color: lightblue;
  }
 
  h1, h2{
@@ -194,7 +198,8 @@ background-attachment: fixed;
  .container-table{
    width: 100%;
    text-align: center;
-  height: 40px;
+  height: 20px;
+  
  }
 a{
   color: rgb(179, 178, 178);
@@ -206,4 +211,21 @@ a{
   text-align: center;
   font-size: 18px;
 }
+.search{
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+.inventory{
+  border: none;
+  border-radius: 2%;
+  padding: 15px;
+  background:linear-gradient(5deg, #0B132B, grey);
+  text-align: center;
+  width: 40%;
+  margin: auto;
+
+}
+
 

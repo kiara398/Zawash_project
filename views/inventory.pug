@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+
+    body.regist
+        h2.reg INVENTORY CAPTURE
+        form.inventory(name='inventory' action='/inventory' method='POST')
+            
+            input.names(type="date" name='doi' placeholder='Date')
+            br
+            br
+            select#inventory(name='inventory')
+                            option(value='item') Item
+                            option(value='detergent') Detergent
+                            option(value='electricity') Electricity
+                            option(value='water') Water
+                            option(value='polish') Polish
+            br
+            br
+            button.button2(type='Submit') Capture
+

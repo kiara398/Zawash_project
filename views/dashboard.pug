@@ -2,47 +2,55 @@ extends layout
 
 block content 
 
-    body.dash 
+    body.dash
         .container-tables
                 h2 Earnings tracker
+                form.search(action='/dashboard')
+                    div.form-row 
+                        div.col 
+                            input(type='date' name='searchdate' value='defaultDate')
+                        div.col
+                            input.btn.btn-primary(type='submit')
                 table.table2
                     thead.thead
                         tr
-                            th(scope='col') Washer
-                            th(scope='col') Cars washed
-                            th(scope='col') Amount due
+                            th Washer
+                            th Cars Washed
+                            th Amount due
                         tbody
                         if washers.length 
                             each washer in washers
                                 tr
                                     td #{washer.details[0].fullnames}
                                     td #{washer.count}  
-                                    
-                                
+                                    td #{washer.totalPayout}
+                            tr 
+                                th(colspan=2) Total Payout 
+                                td #{new Intl.NumberFormat().format(sumPayout.totalPayoutPerDay)}
 
                 
                         
 
-                h2 Costs tracker
-                table.table2
-                    thead.thead
-                        tr
-                            th(scope='col') Date
-                            th(scope='col') Item
-                            th(scope='col') Amount spent
-                        tbody
-                        tr
-                            td
-                                input(type='date' placeholder='Date')
-                            td
-                                input(type='text' placeholder='Item')
-                            td
-                                input(type='number' placeholder='Cost')
-                        tr
-                            td
-                                input(type='date' placeholder='Date')
-                            td
-                                input(type='text' placeholder='Item')
-                            td
-                                input(type='number' placeholder='Cost')
-                       
+                //- h2 Costs tracker
+                //-  form.search(action='/dashboard' method='POST')
+                //-     div.form-row 
+                //-         div.col 
+                //-             input(type='date' name='searchdate' value='defaultDate')
+                //-         div.col
+                //-             input.btn.btn-primary(type='submit')
+                //- table.table2
+                //-     thead.thead
+                //-         tr
+                //-             th Item
+                //-             th Quantity
+                //-             th Amount spent
+                //-         tbody
+                //-             each inventory in inventories
+                //-                 tr
+                //-                     td #{inventory.details[0].item}
+                //-                     td #{inventory.count} 
+                //-                     td #{inventory.totalCost}
+                //-                 tr 
+                //-                     th(colspan=2) Total Payout 
+                //-                     td #{new Intl.NumberFormat().format(sumPayout.totalAmountSpent)}
+

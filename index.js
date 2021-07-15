@@ -1,12 +1,14 @@
 // Dependecies
 const express = require("express")
 const path = require('path');
+const moment = require('moment')
 //requiring the routes.
 const homeroutes = require('./routes/homeroutes')
 const registerroutes = require('./routes/registerroutes')
 const loginroutes = require('./routes/loginroutes')
 const cartrackroutes = require('./routes/cartrackroutes')
 const dashboardroutes = require('./routes/dashboardroutes')
+const inventoryroutes = require('./routes/inventoryroutes')
 const mongoose = require('mongoose')
 require('dotenv').config();
 
@@ -30,6 +32,7 @@ mongoose.connect(process.env.DATABASE, {
 // settings or configurations
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.locals.moment = moment
 
 // middle ware
 app.use(express.urlencoded({extended: true}))
@@ -45,6 +48,8 @@ app.use('/login', loginroutes)
 app.use('/cartracking', cartrackroutes)
 
 app.use('/dashboard', dashboardroutes)
+
+app.use('/inventory', inventoryroutes)
 
 // handling non existing routes
 app.get('*', (req, res)=> {

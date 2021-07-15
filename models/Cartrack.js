@@ -8,9 +8,12 @@ const cartrackSchema = new mongoose.Schema({
         trim: true,
     },
 
+    today:{
+        type: Date,
+    },
+
     datetimeArrival: {
         type: Date,
-        trim: true,
         },
 
     carType:{
@@ -31,6 +34,14 @@ const cartrackSchema = new mongoose.Schema({
     package:{
         type: String,
         trim: true,
+    },
+
+    packagePrice:{
+        type: Number,
+    },
+
+    washerFee:{
+        type: Number,
     }
 })
 //export the schema

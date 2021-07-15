@@ -11,7 +11,6 @@ const washerSchema = new mongoose.Schema({
     },
     dob:{
         type: Date,
-        trim: true,
     },
     res:{
         type: String,
@@ -23,7 +22,6 @@ const washerSchema = new mongoose.Schema({
     },
     phonenumber:{
         type: Number,
-        trim: true,
     }
 
 })

@@ -113,7 +113,6 @@ if(phone.value == ''){
 } else{
   phone.style.border = '2px solid green';
   errorphone.innerHTML = '';
- 
 }
-return true
+
 }
