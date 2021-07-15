@@ -20,8 +20,9 @@ const washerSchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
-    phonenumber:{
-        type: Number,
+    zwash:{
+        type: String,
+        trim:true,
     }
 
 })

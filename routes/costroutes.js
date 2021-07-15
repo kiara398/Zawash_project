@@ -1,6 +1,7 @@
 const express = require('express');
 const Inventory = require('../models/Inventory')
 const moment = require('moment');
+const mongoose = require('mongoose');
 const router = express.Router();
 
 router.get('/', async(req,res)=>{

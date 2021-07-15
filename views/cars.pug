@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+    body.regist 
+         h2.reg CARS COLLECTION.
+         form.search(action='/cars')
+                            div.form-row 
+                                div.col 
+                                    input(type='date' name='searchdate' value='defaultDate')
+                                div.col
+                                    input.btn.btn-primary(type='submit')
+         table.table.table-bordered 
+            thead
+                tr
+                    th Number-Plate 
+                    th Date
+                    th Car-Type
+                    th Color
+                    th Amount
+                    
+            tbody
+                if cars.length
+                    each car in cars
+                        tr
+                            td #{car.numberPlate}
+                            td #{moment(car.today).format('DD/MM/YYYY')}
+                            td #{car.carType}
+                            td #{car.color}
+                            td #{car.packagePrice}
+                    tr
+                            th(colspan=4) Total Collections
+                            th #{new Intl.NumberFormat().format(total.totalCollection)}
+    

@@ -169,7 +169,7 @@ select{
   border: none;
   text-align: center;
   font-size: 18px;
-  background-color:#8AC6D0;
+  background-color: lightgray;
  }
  .table2{
    width: 40%;
@@ -238,7 +238,15 @@ a{
   text-align: center;
   width: 40%;
   margin: auto;
-
+}
+.delete{
+background: lightgray;
+}
+.table-bordered{
+  width: 70%;
+  margin: auto;
+  border-radius: 12px;
+  background: lightgray;
 }
 
 

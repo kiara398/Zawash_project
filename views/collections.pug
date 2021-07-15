@@ -1,0 +1,30 @@
+extends layout 
+
+block content
+    body.regist 
+         h2.reg WASHERS COLLECTION.
+         table.table.table-bordered 
+            thead
+                tr
+                    th Full Name 
+                    th Gender
+                    th Date of Birth
+                    th Place of residence
+                    th NIN number
+                    th Zwash Id
+                    th Delete washer
+            tbody
+                if users.length
+                    each user in users
+                        tr
+                            td #{user.fullnames}
+                            td #{user.Gender}
+                            td #{moment(user.dob).format('DD/MM/YYYY')}
+                            td #{user.res}
+                            td #{user.nin}
+                            td #{user.zwash}
+                            td 
+                                form.delete(method="post" action='/register/delete-washer')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.button2(type="submit") Delete
+

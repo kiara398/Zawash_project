@@ -20,10 +20,21 @@ html
                         a.nav-link(href='./cartracking',  class=routeName=='cartracking'?'active': '') Car-tracking
                     li.nav-item
                         a.nav-link(href='./inventory',  class=routeName=='inventory'?'active': '') Inventory
-                    li.nav-item
-                        a.nav-link(href='./dashboard',  class=routeName=='dashboard'?'active': '') Dashboard
-                    li.nav-item
-                        a.nav-link(href='./register',  class=routeName=='register'?'active': '') Register
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Dashboard
+                        .dropdown-menu
+                            a.dropdown-item(href='/dashboard') Washer Payout
+                            a.dropdown-item(href='/costs') Cost Monitor
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Register
+                        .dropdown-menu
+                            a.dropdown-item(href='/register') Washer Registration
+                            a.dropdown-item(href='/register_manager') Register Manager
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Collections
+                        .dropdown-menu
+                            a.dropdown-item(href='/collections') Washer details
+                            a.dropdown-item(href='/cars') Car details
                 a(href='./login',  class=routeName=='login'?'active': '')  Login
 
 

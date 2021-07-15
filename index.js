@@ -16,6 +16,8 @@ const loginroutes = require('./routes/loginroutes')
 const cartrackroutes = require('./routes/cartrackroutes')
 const dashboardroutes = require('./routes/dashboardroutes')
 const costroutes = require('./routes/costroutes')
+const collectionroutes = require('./routes/collectionroutes')
+const carcollroutes = require('./routes/carcollroutes')
 const managerroutes = require('./routes/managerroutes')
 const inventoryroutes = require('./routes/inventoryroutes')
 const Manager = require('./models/Manager')
@@ -79,6 +81,10 @@ app.use('/dashboard', dashboardroutes)
 app.use('/inventory', inventoryroutes)
 
 app.use('/register_manager', managerroutes)
+
+app.use('/collections', collectionroutes)
+
+app.use('/cars', carcollroutes)
 
 
 // handling non existing routes
