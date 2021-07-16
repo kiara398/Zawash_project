@@ -58,8 +58,8 @@ passport.serializeUser(Manager.serializeUser());
 passport.deserializeUser(Manager.deserializeUser());
 
 var loginChecker = function (req, res, next) {
-  if (req.path != '/login' && !req.session.user) {
-    res.redirect('/login')
+  if (req.path != '/login' &&req.path != '/' && !req.session.user) {
+    res.redirect('/')
   }
   next()
 }

@@ -10,12 +10,12 @@ router.post('/login', passport.authenticate('local',
     {failureRedirect: '/login?alert=error'}),
     (req,res)=>{
         req.session.user=req.user
-        res.redirect('/');
+        res.redirect('/cartracking');
 })
 
 router.get('/logout', (req, res) => {
     req.session.destroy(()=> {
-       res.redirect('/login')
+       res.redirect('/')
      })
    })
 module.exports = router;
