@@ -1,7 +1,9 @@
 const express = require('express');
-// const mongoose = require('mongoose');
+
 const Inventory = require('../models/Inventory')
 const router = express.Router();
+
+
 
 router.get('/',(req,res) =>{
 
@@ -10,7 +12,7 @@ router.get('/',(req,res) =>{
 
 router.post('/', async(req,res)=>{
     try{
-         const invent = new Inventory(req.body);
+        const invent = new Inventory(req.body);
         await invent.save()
         res.redirect('inventory')
         console.log(req.body)

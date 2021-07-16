@@ -51,6 +51,7 @@ form {
 .btn-primary{
   margin-left: 30%;
   width: 40%;
+  margin-top: 10px;
 }
 .copyright{
   text-align: center;
@@ -170,7 +171,7 @@ select{
   font-size: 18px;
   background-color:#8AC6D0;
  }
- .table2, td{
+ .table2{
    width: 40%;
   border-radius: 10px;
   table-layout: fixed;
@@ -180,8 +181,20 @@ select{
   height: 80px;
   margin: auto;
   border-top: 2px solid grey;
-  background-color: lightblue;
+  background-color: lightgray;
  }
+ td{
+  width: 40%;
+ border-radius: 10px;
+ table-layout: fixed;
+ border: none;
+ text-align: center;
+ font-size: 18px;
+ height: 80px;
+ margin: auto;
+ border-top: 2px solid grey;
+}
+
 
  h1, h2{
   text-align: center;

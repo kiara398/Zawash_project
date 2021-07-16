@@ -9,12 +9,15 @@ block content
             input.names(type="date" name='doi' placeholder='Date')
             br
             br
-            select#inventory(name='inventory')
+            select#inventory(name='item')
                             option(value='item') Item
                             option(value='detergent') Detergent
                             option(value='electricity') Electricity
                             option(value='water') Water
                             option(value='polish') Polish
+            br
+            br
+            input.names(type="number" name='price' placeholder='Price')
             br
             br
             button.button2(type='Submit') Capture

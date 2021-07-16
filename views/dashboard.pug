@@ -26,31 +26,7 @@ block content
                                     td #{washer.totalPayout}
                             tr 
                                 th(colspan=2) Total Payout 
-                                td #{new Intl.NumberFormat().format(sumPayout.totalPayoutPerDay)}
-
-                
-                        
-
-                //- h2 Costs tracker
-                //-  form.search(action='/dashboard' method='POST')
-                //-     div.form-row 
-                //-         div.col 
-                //-             input(type='date' name='searchdate' value='defaultDate')
-                //-         div.col
-                //-             input.btn.btn-primary(type='submit')
-                //- table.table2
-                //-     thead.thead
-                //-         tr
-                //-             th Item
-                //-             th Quantity
-                //-             th Amount spent
-                //-         tbody
-                //-             each inventory in inventories
-                //-                 tr
-                //-                     td #{inventory.details[0].item}
-                //-                     td #{inventory.count} 
-                //-                     td #{inventory.totalCost}
-                //-                 tr 
-                //-                     th(colspan=2) Total Payout 
-                //-                     td #{new Intl.NumberFormat().format(sumPayout.totalAmountSpent)}
-
+                                td #{new Intl.NumberFormat().format(sumPayout.totalPayoutPerDay)} 
+            
+        a(href="/costs")
+            button.btn.btn-primary(type='button') View Expenses               

@@ -1,0 +1,30 @@
+extends layout 
+
+block content 
+    body.dash
+        h2 Costs tracker
+                        form.search(action='/costs')
+                            div.form-row 
+                                div.col 
+                                    input(type='date' name='searchdate' value='defaultDate')
+                                div.col
+                                    input.btn.btn-primary(type='submit')
+                        table.table2
+                            thead.thead
+                                tr
+                                    th Date
+                                    th Item
+                                    th Price
+                            tbody
+                            if inventories.length
+                                each inventory in inventories
+                                        tr
+                                            td #{moment(inventory.doi).format('YYYY-MM-DD')}
+                                            td #{inventory.item} 
+                                            td #{inventory.price}
+                                tr 
+                                        th(colspan=2) Total Cost 
+                                        td #{new Intl.NumberFormat().format(sumCost.totalCost)}
+
+        a(href="/dashboard")
+            button.btn.btn-primary(type='button') Washer Payout               

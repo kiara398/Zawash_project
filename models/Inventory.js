@@ -5,22 +5,13 @@ const inventorySchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
-    quantity:{
-        type: Number,
-    },
-    amount:{
+
+    price:{
         type: Number,
     },
 
     doi:{
         type: Date,
-    },
-
-    unitPrice:{
-        type:Number,
-    },
-    inventoryPrices:{
-        type:Number,
     }
 })
 
