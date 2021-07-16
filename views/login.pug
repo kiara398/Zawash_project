@@ -3,6 +3,8 @@ extends layout
 block content
     body.dash
         .container-login 
+            if alert == "error"
+                 div.alert.alert-danger Login failed! Invalid username or password.
             .container
                 h1 ZAWASH
                 form(action='/login' method='POST' onsubmit="validation();")
@@ -13,7 +15,7 @@ block content
                     br
                     .form-floating
                         small#error2
-                        input#exampleInputPassword1.form-control(type='password' name='psw' placeholder='Password')
+                        input#exampleInputPassword1.form-control(type='password' name='password' placeholder='Password')
                     br
                     .form-floating.form-check
                         input#exampleCheck1.form-check-input(type='checkbox')

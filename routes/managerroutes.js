@@ -14,7 +14,7 @@ router.post('/', async(req,res)=>{
             res.status(400).render('register_manager',{title: "managers"})
             console.log(err)
         }else{
-            res.redirect('manager')
+            res.redirect('register_manager')
         }
     })
 })

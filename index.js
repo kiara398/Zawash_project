@@ -57,13 +57,13 @@ passport.use(Manager.createStrategy());
 passport.serializeUser(Manager.serializeUser());
 passport.deserializeUser(Manager.deserializeUser());
 
-// var loginChecker = function (req, res, next) {
-//   if (req.path != '/login' && !req.session.user) {
-//     res.redirect('/login')
-//   }
-//   next()
-// }
-// app.use(loginChecker)
+var loginChecker = function (req, res, next) {
+  if (req.path != '/login' && !req.session.user) {
+    res.redirect('/login')
+  }
+  next()
+}
+app.use(loginChecker)
 
 // routes
 app.use('/', homeroutes)
@@ -72,7 +72,7 @@ app.use('/register', registerroutes)
 
 app.use('/costs', costroutes)
 
-app.use('/login', loginroutes)
+app.use('/', loginroutes)
 
 app.use('/cartracking', cartrackroutes)
 

@@ -6,23 +6,24 @@ const managerSchema = new mongoose.Schema({
         trim: true,
     },
 
-    username:{
-        type: String,
-        trim: true,
+    phonenumber:{
+        type: Number,
     },
 
     email:{
         type: String,
+        required:'please enter valid email',
+        unique: true,
         trim: true,
     },
 
-    psw:{
+    password:{
         type: String,
-        trim: true,
     }
 }
 
 );
 
-managerSchema.plugin(passportLocalMongoose);
+
+managerSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 module.exports = mongoose.model('Manager', managerSchema);
