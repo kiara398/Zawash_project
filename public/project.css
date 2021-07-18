@@ -73,7 +73,7 @@ form {
   margin: auto;
 }
 
-.names, .gender, .dob, .residence, .nin, .phone{
+#names, #gender, #dob, #residence, #nin, #zwash{
   width: 90%;
   border: none;
   border-radius: 4px;
@@ -91,13 +91,13 @@ form {
 }
 .button3{
   width: 80%;
-  padding: 15px;
-  background-color: #8AC6D0;
+  padding: 10px;
+  background-color: #7d9fe9;
   border: none;
   border-radius: 6px;
  color: black;
  text-transform: uppercase;
- margin-top: 20px;
+ margin-top: 50px;
 }
 .button2:hover{
   background-color: grey;
@@ -136,7 +136,7 @@ form {
 }
 
 
-select{
+select,#date, #price{
     width: 85%;
     padding: 8px;
     border: none;
@@ -163,7 +163,8 @@ select{
 
  /* editing dashboard */
  .table{
-  padding: 30px;
+  width: 100%;
+  padding: 20px;
   border-radius: 8px;
   table-layout: fixed;
   border: none;
@@ -190,7 +191,7 @@ select{
  border: none;
  text-align: center;
  font-size: 18px;
- height: 80px;
+ height: 70px;
  margin: auto;
  border-top: 2px solid grey;
 }
@@ -226,6 +227,12 @@ a{
 }
 .search{
   width: 40%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+.searchcars{
+  width: 70%;
   margin: auto;
   text-align: center;
   font-size: 18px;

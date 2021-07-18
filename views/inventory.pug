@@ -6,7 +6,7 @@ block content
         h2.reg INVENTORY CAPTURE
         form.inventory(name='inventory' action='/inventory' method='POST')
             
-            input.names(type="date" name='doi' placeholder='Date')
+            input#date(type="date" name='doi' placeholder='Date')
             br
             br
             select#inventory(name='item')
@@ -17,7 +17,7 @@ block content
                             option(value='polish') Polish
             br
             br
-            input.names(type="number" name='price' placeholder='Price')
+            input#price(type="number" name='price' placeholder='Price')
             br
             br
             button.button2(type='Submit') Capture

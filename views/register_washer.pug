@@ -10,12 +10,12 @@ block content
         .container-register
                 form.regForm(name='register' action='/register' method='POST' onsubmit="return validation2();")
                     small#errornames
-                    input.names(type='text' placeholder='Full Name' name="fullnames")
+                    input#names(type='text' placeholder='Full Name' name="fullnames")
                     br
                     br
 
                     small#errorgender
-                    select.gender(name='Gender')
+                    select#gender(name='Gender')
                         option(value='gender') Gender
                         option(value='female') Female
                         option(value='male') Male
@@ -23,21 +23,21 @@ block content
                     br 
 
                     small#errordob
-                    input.dob(type='date' placeholder='Date of birth' name="dob")
+                    input#dob(type='date' placeholder='Date of birth' name="dob")
                     br
                     br
 
                     small#errores   
-                    input.residence(type='text' placeholder='Place of residence' name="res")
+                    input#residence(type='text' placeholder='Place of residence' name="res")
                     br  
                     br
 
                     small#errornin
-                    input.nin(type='text' placeholder='NIN number' name="nin")
+                    input#nin(type='text' placeholder='NIN number' name="nin")
                     br 
                     br 
-                    small#errorphone 
-                    input.phone(type='text' placeholder='Zwash ID' name="zwash")
+                    small#errorza 
+                    input#zwash(type='text' placeholder='Zwash ID' name="zwash")
                     br 
                     br 
                 
