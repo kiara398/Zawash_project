@@ -1,7 +1,10 @@
 body{
  background-color: #f1f1f1;
-}
 
+}
+.collections{
+  background-color:  #222f3e;
+}
 p{
   font-family: sans-serif;
   font-size: 20px;
@@ -221,7 +224,7 @@ a{
 .alert{
   width: 30%;
   margin: auto;
-  font-family: cursive;
+  font-family: roboto;
   text-align: center;
   font-size: 18px;
 }

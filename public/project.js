@@ -18,16 +18,24 @@ let validation2 = () =>{
 
 
   //regular expressions
-//   let nameReg = /^[A-Z]([a-z])+$/;
+  let nameReg = /^[a-zA-Z].*[\s\.]*$/
+
 //   let zawashIdReg  = /^Zwash([0-9]{3})$/;
 //   let nationalIdReg  = /^[A-Z]{3}[0-9A-Z]{8}$/; 
    //if statements
-  if(fullname.value == ''){
+  if(fullname.value.length < 8 ){
     fullname.style.borderBottom = '2px solid coral';
     errornames.innerHTML = 'fill in valid names'
     errornames.style = 'font-size:15px; color:maroon;'
     return false;
-  } else{
+  } 
+  if(!fullname.value.match(nameReg)){
+    fullname.style.borderBottom = '2px solid coral';
+    errornames.innerHTML = 'fill in valid names'
+    errornames.style = 'font-size:15px; color:maroon;'
+    return false;
+  } 
+  else{
     fullname.style.border = '2px solid green';
     errornames.innerHTML = '';
   }
