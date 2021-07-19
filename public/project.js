@@ -19,9 +19,8 @@ let validation2 = () =>{
 
   //regular expressions
   let nameReg = /^[a-zA-Z].*[\s\.]*$/
-
-//   let zawashIdReg  = /^Zwash([0-9]{3})$/;
-//   let nationalIdReg  = /^[A-Z]{3}[0-9A-Z]{8}$/; 
+  let zawashIdReg  = /^Zwash([0-9]{3})$/;
+  let nationalIdReg  = /^[A-Z]{2}[0-9A-Z]{12}$/; 
    //if statements
   if(fullname.value.length < 8 ){
     fullname.style.borderBottom = '2px solid coral';
@@ -67,21 +66,35 @@ let validation2 = () =>{
     residence.style.border = '2px solid green';
     errores.innerHTML = '';
   }
-  if(nin.value == ''){
+  if(nin.value.length<11){
     nin.style.borderBottom = '2px solid coral';
     errornin.innerHTML = 'fill in valid NIN'
     errornin.style = 'font-size:15px; color:maroon;'
     return false;
-  } else{
+  } 
+  if(!nin.value.match(nationalIdReg)){
+    nin.style.borderBottom = '2px solid coral';
+    errornin.innerHTML = 'fill in valid NIN'
+    errornin.style = 'font-size:15px; color:maroon;'
+    return false;
+  }
+  else{
     nin.style.border = '2px solid green';
     errornin.innerHTML = '';
   }
-  if(zwash.value == ''){
+  if(zwash.value.length<8){
     zwash.style.borderBottom = '2px solid coral';
     errorza.innerHTML = 'fill in valid employee Id'
     errorza.style = 'font-size:15px; color:maroon; '
     return false;
-  } else{
+  } 
+  if(!zwash.value.match(zawashIdReg)){
+    zwash.style.borderBottom = '2px solid coral';
+    errorza.innerHTML = 'fill in valid employee Id'
+    errorza.style = 'font-size:15px; color:maroon; '
+    return false;
+  }
+  else{
     zwash.style.border = '2px solid green';
     errorza.innerHTML = '';
   

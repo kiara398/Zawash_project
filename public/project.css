@@ -205,7 +205,8 @@ select,#date, #price{
   margin-top: 20px;
   font-family: roboto;
  }
- .dash{background-image: url(/images/papper3.jfif);
+ .dash{
+ background-image: url(/images/papper3.jfif);
  background: linear-gradient(to bottom, white, #000000b8), url('/images/papper3.jfif');
  color: black;
  background-repeat: no-repeat;
@@ -252,8 +253,16 @@ a{
 .delete{
 background: lightgray;
 }
+.table-washers{
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  border-radius: 12px;
+  background: lightgray;
+}
 .table-bordered{
   width: 70%;
+  text-align: center;
   margin: auto;
   border-radius: 12px;
   background: lightgray;
