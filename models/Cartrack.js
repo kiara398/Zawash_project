@@ -1,7 +1,7 @@
 //require mongoose into our file. 
 const mongoose = require('mongoose');
 
-//create a schema
+//create a schema for how our data will be saved
 const cartrackSchema = new mongoose.Schema({
     numberPlate:{
         type: String,
@@ -44,5 +44,5 @@ const cartrackSchema = new mongoose.Schema({
         type: Number,
     }
 })
-//export the schema
+//export the schema to be accessed by other files.
 module.exports = mongoose.model('Cartrack', cartrackSchema);

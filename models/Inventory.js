@@ -1,5 +1,7 @@
+//require mongoose dependency into our file
 const mongoose = require('mongoose');
 
+//create a new schema
 const inventorySchema = new mongoose.Schema({
     item:{
         type: String,

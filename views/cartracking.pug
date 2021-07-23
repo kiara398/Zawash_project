@@ -10,10 +10,10 @@ block content
         .container
             h2.reg REGISTER CAR HERE!
             #form-wrapper
-                form#car-reg(action='/cartracking' method='POST')
+                form#car-reg(name='cars' action='/cartracking' method='POST' onsubmit="return validation3();")
                     input#numberPlate.numberPlate(type='text' name='numberPlate' placeholder='Number-Plate')
                     br
-                    small#error3
+                    small#errornplate
                     br
                     .container2
                         input#date.date(type='date' name='today' placeholder='date')

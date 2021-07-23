@@ -1,4 +1,5 @@
 let managerVal = ()=>{
+    
     //getting input fields by form name and field name
     let fnames = document.manager.fnames;
     let email = document.manager.email;

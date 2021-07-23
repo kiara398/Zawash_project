@@ -22,6 +22,7 @@ let validation2 = () =>{
   let zawashIdReg  = /^Zwash([0-9]{3})$/;
   let nationalIdReg  = /^[A-Z]{2}[0-9A-Z]{12}$/; 
    //if statements
+   
   if(fullname.value.length < 8 ){
     fullname.style.borderBottom = '2px solid coral';
     errornames.innerHTML = 'fill in valid names'
