@@ -20,7 +20,7 @@ let validation3 = () =>{
 
 
   //regular expressions
-  // let nPlateVal = /^U[A-Z]{2}[0-9]{3}[A-Z]{1}$/
+  let nPlateVal = /^([A-Z]{3}.*[\s\.]*[0-9]{3}[A-Z]{1})$/
 
    //if statements
    //number plate validation
@@ -30,12 +30,12 @@ let validation3 = () =>{
     errornplate.style = 'font-size:15px; color:maroon;'
     return false;
    }
-  // if(!nplate.value.match(nPlateVal)){
-  //   nplate.style.borderBottom = '2px solid coral';
-  //   errornplate.innerHTML = 'fill in valid plate number format'
-  //   errornplate.style = 'font-size:15px; color:maroon;'
-  //   return false;
-  // } 
+  if(!nplate.value.match(nPlateVal)){
+    nplate.style.borderBottom = '2px solid coral';
+    errornplate.innerHTML = 'fill in valid plate number format'
+    errornplate.style = 'font-size:15px; color:maroon;'
+    return false;
+  } 
   else{
     nplate.style.border = '2px solid green';
     errornplate.innerHTML = '';
