@@ -1,10 +1,10 @@
+//importing all necessary dependencies
 const express = require('express');
-
 const router = express.Router();
 const Cartrack = require('../models/Cartrack')
 const Washer = require('../models/Washer')
 
-
+//listing packages offered at the washing bay. 
 washPackages = {
     smallcars: {washerFee: 3000, packagePrice: 10000},
     medium: {washerFee: 4000, packagePrice: 15000},
@@ -14,10 +14,7 @@ washPackages = {
     truck: {washerFee: 5000, packagePrice: 20000},
 }
 
-// router.get('/',(req,res)=>{
-//     res.render('cartracking',{title:"car-tracking", routeName:"cartracking"})
-// })
-
+//using get method with async and await to request data from the washers schema
 router.get('/', async(req, res) => {
     let washerlist = await Washer.find();
     res.render('cartracking', { washers: washerlist,
@@ -25,16 +22,9 @@ router.get('/', async(req, res) => {
     })
 })
 
-// router.post('/',(req,res)=>{
-//     console.log(req.body)
-//     // res.send("Successfully registered!!!")
-//     const cartrack = new Cartrack(req.body);
-//     cartrack.save()
-//        .then(()=>{res.send('registered successfully!');})
-//        .catch((err) =>{console.log(err); res.send('OOPS! something went wrong');})
-// })
-
+//using a post method to send data and update our form
 router.post('/', async(req,res)=>{
+    //using the try statement to test our block of code.
     try{
         let data = req.body
         let datetimeArrival = Date.parse(data.today + 'T' + data.time)
@@ -48,8 +38,10 @@ router.post('/', async(req,res)=>{
        await cartrack.save()
        res.redirect('cartracking?alert=success')
     }
+     //using the  catch statement to handle an error
     catch(err){
         res.status(400).render('cartracking', {title:"car-tracking", routeName:"cartrack", alert:'error'})
     }
 })
+//exporting the router.
 module.exports = router;

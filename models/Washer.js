@@ -1,5 +1,6 @@
+//import mongoose
 const mongoose = require('mongoose');
-
+//create a new schema for how washers' information will be stores
 const washerSchema = new mongoose.Schema({
     fullnames:{
         type: String,
@@ -26,5 +27,5 @@ const washerSchema = new mongoose.Schema({
     }
 
 })
-
+//export our schema
 module.exports = mongoose.model('Washer', washerSchema);

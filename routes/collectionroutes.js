@@ -5,7 +5,7 @@ const Washer = require('../models/Washer')
 
 
 
-
+//using a get method to request data
 router.get('/', async (req, res) => {
     try {
         // find all the data in the Washers collection
@@ -16,5 +16,5 @@ router.get('/', async (req, res) => {
         res.send('Failed to retrive washer details');
     }
 })
-
+//export the route
 module.exports = router;

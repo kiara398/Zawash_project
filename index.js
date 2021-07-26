@@ -57,6 +57,7 @@ passport.use(Manager.createStrategy());
 passport.serializeUser(Manager.serializeUser());
 passport.deserializeUser(Manager.deserializeUser());
 
+//custom middleware
 var loginChecker = function (req, res, next) {
   if (req.path != '/login' &&req.path != '/' && !req.session.user) {
     res.redirect('/')

@@ -1,9 +1,10 @@
+//importing necessary dependencies
 const express = require('express');
 const Cartrack = require('../models/Cartrack')
 const moment = require('moment');
 const router = express.Router();
 
-
+//getting data
 router.get('/', async(req,res)=>{
     try{
         let selectedDate = moment().format('YYYY-MM-DD')
@@ -14,7 +15,7 @@ router.get('/', async(req,res)=>{
            {$lookup: { from:'washers', localField:'_id', foreignField:'_id', as:"details"}}
         ])
         
-        //gettin total payout of washers for each selected date.
+        //getting total payout of washers for each selected date.
         let totalPayoutPerDay = await Cartrack.aggregate(
             [
                 {$match: {today: new Date(selectedDate)}},
@@ -24,6 +25,7 @@ router.get('/', async(req,res)=>{
         res.render("dashboard" , {washers: washedVehicles, title:"List of Car Washers", 
         defaultDate:selectedDate, sumPayout:totalPayoutPerDay[0], routeName:"dashboard"})
     }
+    //handling an error
     catch(err) {
         console.log(err)
         res.send('OOPS! something went wrong!')

@@ -21,8 +21,9 @@ let validation2 = () =>{
   let nameReg = /^[A-Z]([a-z'-.]+ [A-Z][a-z'-.]+)$/
   let zawashIdReg  = /^Zwash([0-9]{3})$/;
   let nationalIdReg  = /^[A-Z]{2}[0-9A-Z]{12}$/; 
-   //if statements
    
+  //if statements
+   //fullname validation
   if(fullname.value.length < 8 ){
     fullname.style.borderBottom = '2px solid coral';
     errornames.innerHTML = 'fill in valid names'
@@ -39,7 +40,7 @@ let validation2 = () =>{
     fullname.style.border = '2px solid green';
     errornames.innerHTML = '';
   }
-  
+  //gender validation
   if(gender.value == "gender"){
     gender.style.borderBottom = '2px solid coral';
     errorgender.innerHTML = 'select your gender'
@@ -49,6 +50,7 @@ let validation2 = () =>{
     gender.style.border = '2px solid green';
     errorgender.innerHTML = '';
   }
+  //validating date of birth.
   if(dob.value == ''){
     dob.style.borderBottom = '2px solid coral';
     errordob.innerHTML = 'fill in valid date of birth'
@@ -58,6 +60,7 @@ let validation2 = () =>{
     dob.style.border = '2px solid green';
     errordob.innerHTML = '';
   }
+  //validating residence.
   if(residence.value == ''){
     residence.style.borderBottom = '2px solid coral';
     errores.innerHTML = 'fill in residence'
@@ -67,6 +70,7 @@ let validation2 = () =>{
     residence.style.border = '2px solid green';
     errores.innerHTML = '';
   }
+  //validating national id number.
   if(nin.value.length<11){
     nin.style.borderBottom = '2px solid coral';
     errornin.innerHTML = 'fill in valid NIN'
@@ -83,6 +87,7 @@ let validation2 = () =>{
     nin.style.border = '2px solid green';
     errornin.innerHTML = '';
   }
+  //validating workers' id.
   if(zwash.value.length<8){
     zwash.style.borderBottom = '2px solid coral';
     errorza.innerHTML = 'fill in valid employee Id'

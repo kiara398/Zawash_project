@@ -1,3 +1,4 @@
+/* editing the body of our files */
 body{
  background-color: #f1f1f1;
 
@@ -65,7 +66,7 @@ form {
   margin: auto;
 }
 
-/* editing registration page */
+/* editing registration pages */
 .container-register{
   border: none;
   border-radius: 2%;
@@ -268,4 +269,9 @@ background: lightgray;
   background: lightgray;
 }
 
+.contacts{
+ margin-left: 700px;
+ font-size: 16px;
+ font-family: roboto;
+}
 
