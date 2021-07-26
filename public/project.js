@@ -18,7 +18,7 @@ let validation2 = () =>{
 
 
   //regular expressions
-  let nameReg = /^[a-zA-Z].*[\s\.]*$/
+  let nameReg = /^[A-Z]([a-z'-.]+ [A-Z][a-z'-.]+)$/
   let zawashIdReg  = /^Zwash([0-9]{3})$/;
   let nationalIdReg  = /^[A-Z]{2}[0-9A-Z]{12}$/; 
    //if statements
